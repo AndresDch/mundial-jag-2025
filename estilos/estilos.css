@@ -1,0 +1,416 @@
+/* === Base general === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Inicio === */
+.inicio .fondo {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('../img/fondo.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.inicio .contenedor {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.inicio .logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.inicio h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #FFCC00;
+}
+
+.inicio h2 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.inicio h2 span {
+  color: #00A859;
+  font-weight: bold;
+}
+
+.botones {
+  margin-top: 2rem;
+}
+
+.boton {
+  display: inline-block;
+  background-color: #002776;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #00A859;
+  transform: scale(1.05);
+}
+
+/* === Mundial (general para masculino y femenino) === */
+.mundial {
+
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #fff; /* Texto blanco para contraste */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: url('../img/fondo.jpg') center center/cover no-repeat;
+  z-index: 0;
+}
+
+.mundial::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.encabezado h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.volver {
+  background-color: #002776;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+  background-color: #00a859;
+}
+
+.intro {
+  background-color: #002776;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 800px;
+}
+
+.grupos {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.tarjeta {
+  background-color: white;
+  color: #002776;
+  padding: 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.tarjeta a {
+  text-decoration: none;
+  color: #002776;
+  font-size: 1.3rem;
+}
+
+.animado {
+  animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Grupos: Página de tabla === */
+.grupo {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grupo h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #002776;
+  margin-bottom: 1.5rem;
+}
+
+.grupo table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+.grupo th, .grupo td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.grupo th {
+  background-color: #002776;
+  color: white;
+}
+
+.grupo td img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.grupo .volver {
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+.grupo-pagina {
+  background: linear-gradient(to right, #d4ffec, #fff7cc);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tabla-grupo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contenedor-tabla {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.contenedor-tabla table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.contenedor-tabla th {
+  background-color: #002776;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.contenedor-tabla td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.contenedor-tabla tr:hover {
+  background-color: #f0f8ff;
+}
+
+.bandera {
+  width: 24px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Página de grupos individuales */
+.grupo-pagina {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('../img/fondo.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #002776; /* o white si prefieres */
+}
+
+.grupo-pagina h1 {
+  color: #ffffff; /* Azul oscuro de Brasil, por ejemplo */
+  text-shadow: 1px 1px 4px blue; /* Opcional, mejora legibilidad */
+}
+
+
+
+.encabezado-grupo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.encabezado-grupo h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #002776;
+}
+
+.tabla-grupo {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #002776;
+  color: white;
+}
+
+td img.bandera {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+
+/* === Responsividad para móviles === */
+@media (max-width: 768px) {
+  .inicio h1 {
+    font-size: 2rem;
+  }
+
+  .inicio h2 {
+    font-size: 1.2rem;
+  }
+
+  .boton {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .mundial {
+    padding: 1rem;
+  }
+
+  .encabezado h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .intro {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .grupos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tarjeta {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .grupo {
+    padding: 1.2rem;
+    margin: 1rem auto;
+  }
+
+  .grupo h2 {
+    font-size: 1.5rem;
+  }
+
+  .contenedor-tabla {
+    padding: 1rem;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+
+  .contenedor-tabla table {
+    font-size: 0.9rem;
+  }
+
+  .encabezado-grupo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .encabezado-grupo h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  td img.bandera {
+    width: 24px;
+  }
+}
+
+
+
+
+
+
+
+

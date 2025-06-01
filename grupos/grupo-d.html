@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grupo D - Mundial Masculino</title>
+  <link rel="stylesheet" href="../estilos/estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="grupo-pagina">
+
+  <header class="encabezado">
+    <h1>Grupo D - Masculino</h1>
+    <a href="../masculino.html" class="volver">← Volver</a>
+  </header>
+
+  <section class="tabla-grupo">
+    <div class="contenedor-tabla">
+      <table id="tabla-grupo">
+        <thead>
+          <tr>
+            <th>Equipo</th>
+            <th>PJ</th>
+            <th>G</th>
+            <th>E</th>
+            <th>P</th>
+            <th>GF</th>
+            <th>GC</th>
+            <th>DG</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-equipo="Brasil">
+            <img src="../banderas/brasil.png" alt="Brasil" class="bandera"> Brasil
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td data-equipo="Japón">
+            <img src="../banderas/japon.png" alt="Japón" class="bandera"> Japón
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td data-equipo="Argentina">
+            <img src="../banderas/argentina.svg" alt="Argentina" class="bandera"> Argentina
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Botón para mostrar/ocultar resultados -->
+  <button id="toggleResultados" style="margin: 20px 0; padding: 10px 15px; font-size: 16px;">
+    Mostrar resultados
+  </button>
+
+  <section class="resultados" id="resultados" style="display: none;">
+    <h2>Resultados del Grupo D</h2>
+    <table id="resultados-tabla">
+      <thead>
+        <tr>
+          <th>Equipo 1</th>
+          <th>Goles</th>
+          <th>Equipo 2</th>
+          <th>Goles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Argentina</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td>Japón</td>
+          <td><input type="number" min="0" value="0" /></td>
+        </tr>
+        <tr>
+          <td>Japón</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td>Brasil</td>
+          <td><input type="number" min="0" value="0" /></td>
+        </tr>
+        <tr>
+          <td>Argentina</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td>Brasil</td>
+          <td><input type="number" min="0" value="0" /></td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="actualizarTabla()">Actualizar tabla</button>
+  </section>
+
+  <!-- Scripts al final -->
+  <script src="../scripts/posiciones.js" defer></script>
+
+</body>
+</html>
