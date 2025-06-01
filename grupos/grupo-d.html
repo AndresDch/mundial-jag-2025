@@ -76,7 +76,7 @@
   </section>
 
   <!-- Botón para mostrar/ocultar resultados -->
-  <button id="toggleResultados" style="margin: 20px 0; padding: 10px 15px; font-size: 16px;">
+<button id="toggleResultados" style= "display: none;">
     Mostrar resultados
   </button>
 
@@ -92,19 +92,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr data-partido-id="partido1d">
           <td>Argentina</td>
           <td><input type="number" min="0" value="0" /></td>
           <td>Japón</td>
           <td><input type="number" min="0" value="0" /></td>
         </tr>
-        <tr>
+        <tr data-partido-id="partido2d">
           <td>Japón</td>
           <td><input type="number" min="0" value="0" /></td>
           <td>Brasil</td>
           <td><input type="number" min="0" value="0" /></td>
         </tr>
-        <tr>
+        <tr data-partido-id="partido3d">
           <td>Argentina</td>
           <td><input type="number" min="0" value="0" /></td>
           <td>Brasil</td>
@@ -116,7 +116,9 @@
   </section>
 
   <!-- Scripts al final -->
-  <script src="../scripts/posiciones.js" defer></script>
+ <script type="module" src="../scripts/firebase-config.js"></script>
+<script type="module" src="../scripts/posiciones.js"></script>
+
 
 </body>
 </html>
