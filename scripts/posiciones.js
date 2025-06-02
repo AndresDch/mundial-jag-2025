@@ -121,6 +121,8 @@ function escucharCambiosEnResultados() {
   const inputsGoles = document.querySelectorAll("#resultados-tabla tbody tr input");
 
   inputsGoles.forEach(input => {
+    input.disabled = false; // Asegurarse de que estén activos para el usuario autorizado
+
     input.addEventListener("change", async (e) => {
       const fila = e.target.closest("tr");
       const partidoId = fila.getAttribute("data-partido-id");
@@ -146,11 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnToggle = document.getElementById('toggleResultados');
   const seccionResultados = document.getElementById('resultados');
 
+  // Cargar resultados para todos
+  cargarResultadosDesdeFirestore();
+
+  // Control de acceso para edición
   onAuthStateChanged(auth, user => {
-    const correoAutorizado = "dilancamacho2216@gmail.com"; // <-- reemplaza con tu correo
+    const correoAutorizado = "dilancamacho2216@gmail.com";
 
     if (user && user.email === correoAutorizado) {
-      // Mostrar botón y sección, y activar todo
+      // Mostrar botón para mostrar/ocultar resultados
       if (btnToggle && seccionResultados) {
         btnToggle.style.display = 'inline-block';
         btnToggle.addEventListener('click', () => {
@@ -160,12 +166,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      cargarResultadosDesdeFirestore();
+      // Activar edición
       escucharCambiosEnResultados();
     } else {
-      // Ocultar todo para otros
+      // Usuario no autorizado: bloquear inputs
+      const inputs = document.querySelectorAll("#resultados-tabla input");
+      inputs.forEach(input => input.disabled = true);
       if (btnToggle) btnToggle.style.display = 'none';
-      if (seccionResultados) seccionResultados.style.display = 'none';
     }
   });
 });
