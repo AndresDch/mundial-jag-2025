@@ -10,7 +10,7 @@ body {
 
 
 .torneo-header {
-  background-color: #002776;
+  background-color: #180b7b;
   color: white;
   text-align: center;
   padding: 20px 10px;
@@ -31,7 +31,7 @@ body {
   margin: 0 10px;
   text-decoration: none;
   color: black;
-  background-color: #ffcc00;
+  background-color: #db9900;
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: bold;
@@ -40,7 +40,7 @@ body {
 
 .torneo-nav a:hover,
 .torneo-nav a.activo {
-  background-color: #ffcc00;
+  background-color: #db9900;
   color: #fff;
 }
 
@@ -68,8 +68,8 @@ body {
 .torneo-footer {
   text-align: center;
   padding: 15px;
-  background-color: #ffcc00;
-  color: #fff;
+  background-color: #db9900;
+  color: black;
   margin-top: 40px;
 }
 
@@ -124,6 +124,24 @@ body {
   background-color: #004d1c;
 }
 
+.volver {
+  display: block;
+  width: fit-content;
+  margin: 30px auto; /* Centrado horizontal con separación */
+  background-color: #002776;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+
+.volver:hover {
+  background-color: #00a859;
+}
+
 
 @media (max-width: 600px) {
   body {
@@ -168,5 +186,12 @@ body {
   .descarga-arbitros button {
     padding: 10px 16px;
     font-size: 0.9rem;
+  }
+  
+   .volver {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    width: 80%;
+    text-align: center;
   }
 }
